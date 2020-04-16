@@ -14,6 +14,30 @@ var interfaceConfig = {
      *
      * Note: this mode is experimental and subject to breakage.
      */
+    DISABLE_VIDEO_BACKGROUND: false,
+
+    INITIAL_TOOLBAR_TIMEOUT: 20000,
+    TOOLBAR_TIMEOUT: 4000,
+    TOOLBAR_ALWAYS_VISIBLE: false,
+    DEFAULT_REMOTE_DISPLAY_NAME: 'Sternenlaborant',
+    DEFAULT_LOCAL_DISPLAY_NAME: 'me',
+    SHOW_JITSI_WATERMARK: true,
+    JITSI_WATERMARK_LINK: 'https://sternenlabor.de',
+
+    // if watermark is disabled by default, it can be shown only for guests
+    SHOW_WATERMARK_FOR_GUESTS: true,
+    SHOW_BRAND_WATERMARK: false,
+    BRAND_WATERMARK_LINK: 'https://sternenlabor.de',
+    SHOW_POWERED_BY: false,
+    SHOW_DEEP_LINKING_IMAGE: false,
+    GENERATE_ROOMNAMES_ON_WELCOME_PAGE: true,
+    DISPLAY_WELCOME_PAGE_CONTENT: true,
+    DISPLAY_WELCOME_PAGE_TOOLBAR_ADDITIONAL_CONTENT: false,
+    APP_NAME: 'Sternenlabor Videochat',
+    NATIVE_APP_NAME: 'Sternenlabor Videochat',
+    PROVIDER_NAME: 'Sternenlabor',
+    LANG_DETECTION: true, // Allow i18n to detect the system language
+    INVITATION_POWERED_BY: true,
     AUTO_PIN_LATEST_SCREEN_SHARE: 'remote-only',
     BRAND_WATERMARK_LINK: '',
 
@@ -71,6 +95,13 @@ var interfaceConfig = {
      * @type {boolean}
      */
     DISABLE_RINGING: false,
+    AUDIO_LEVEL_PRIMARY_COLOR: 'rgba(255,255,255,0.4)',
+    AUDIO_LEVEL_SECONDARY_COLOR: 'rgba(255,255,255,0.2)',
+    POLICY_LOGO: null,
+    LOCAL_THUMBNAIL_RATIO: 16 / 9, // 16:9
+    REMOTE_THUMBNAIL_RATIO: 1, // 1:1
+    // Documentation reference for the live streaming feature.
+    LIVE_STREAMING_HELP_LINK: 'https://www.sternenlabor.de/2020/03/31/sternenlabor-videochat-jitsi-meet/',
 
     /**
      * Whether the speech to text transcription subtitles panel is disabled.
@@ -102,6 +133,7 @@ var interfaceConfig = {
     /**
      * Hide the logo on the deep linking pages.
      */
+    SUPPORT_URL: 'https://www.sternenlabor.de/2020/03/31/sternenlabor-videochat-jitsi-meet/',
     HIDE_DEEP_LINKING_LOGO: false,
 
     /**
@@ -216,6 +248,11 @@ var interfaceConfig = {
     UNSUPPORTED_BROWSERS: [],
 
     /**
+    * Decides whether the chrome extension banner should be rendered on the landing page and during the meeting.
+    * If this is set to false, the banner will not be rendered at all. If set to true, the check for extension(s)
+    * being already installed is done before rendering.
+    */
+    SHOW_CHROME_EXTENSION_BANNER: false,
      * Whether to show thumbnails in filmstrip as a column instead of as a row.
      */
     VERTICAL_FILMSTRIP: true,
@@ -243,6 +280,7 @@ var interfaceConfig = {
     /**
      * Specify Firebase dynamic link properties for the mobile apps.
      */
+    MOBILE_DOWNLOAD_LINK_ANDROID: 'https://play.google.com/store/apps/details?id=org.jitsi.meet',
     // MOBILE_DYNAMIC_LINK: {
     //    APN: 'org.jitsi.meet',
     //    APP_CODE: 'w2atb',
@@ -252,14 +290,19 @@ var interfaceConfig = {
     // },
 
     /**
+     * Specify URL for downloading ios mobile app.
+     */
+    MOBILE_DOWNLOAD_LINK_IOS: 'https://itunes.apple.com/us/app/jitsi-meet/id1165103905',
+
+    /**
      * Specify mobile app scheme for opening the app from the mobile browser.
      */
-    // APP_SCHEME: 'org.jitsi.meet',
+    APP_SCHEME: 'org.jitsi.meet',
 
     /**
      * Specify the Android app package name.
      */
-    // ANDROID_APP_PACKAGE: 'org.jitsi.meet',
+    ANDROID_APP_PACKAGE: 'org.jitsi.meet',
 
     /**
      * Override the behavior of some notifications to remain displayed until
