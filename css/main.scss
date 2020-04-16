@@ -8,6 +8,8 @@
 
 @import 'variables';
 
+@import 'sternenlabor_variables';
+
 /* Variables END */
 
 /* Mixins BEGIN */
@@ -92,3 +94,5 @@ $flagsImagePath: "../images/";
 @import 'video-preview';
 
 /* Modules END */
+
+@import 'sternenlabor_overrides';
