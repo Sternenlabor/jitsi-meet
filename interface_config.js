@@ -253,8 +253,6 @@ var interfaceConfig = {
     * being already installed is done before rendering.
     */
     SHOW_CHROME_EXTENSION_BANNER: false,
-     * Whether to show thumbnails in filmstrip as a column instead of as a row.
-     */
     VERTICAL_FILMSTRIP: true,
 
     // Determines how the video would fit the screen. 'both' would fit the whole
