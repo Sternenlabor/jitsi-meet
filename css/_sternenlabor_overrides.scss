@@ -26,11 +26,6 @@
         #enter_room {
             background-color: #dc3f79;
             
-            input {    
-                background-color: #dc3f79;
-                color: white;
-            }
-            
             .enter-room-input-container {
                 color: #fff;
                 border-color: #fff;
@@ -38,6 +33,15 @@
 
                 ::placeholder {
                     color: #fff;
+                }
+
+                .enter-room-input {
+                    background-color: #dc3f79;
+                    color: white;
+                    border-color: transparent;
+                }
+                .enter-room-input:focus {
+                    outline: none;
                 }
             }
         }
@@ -82,11 +86,20 @@
 
         .item {
             background: #107eb3;
-
+            margin: 4px 4px 0 0;
+            width: calc(100% - 4px);
 
             &.with-click-handler:hover {
                 background: #98ca5d;
             }
+
+            .subtitle {
+                color: #fff;
+            }
+        }
+
+        .item:first-child {
+            margin: 0 4px 0 0;
         }
     }
 }
@@ -110,4 +123,24 @@
 .welcome .header #enter_room .enter-room-input-container .enter-room-input {
     border-color: white;
     border-image: none;
+}
+
+.welcome .header {
+    background: white;
+}
+
+#welcome_page > div.header > div.header-container > h1 {
+    display: none;
+}
+
+.welcome .header .header-text-subtitle {
+    color: #545859;
+    margin: 130px 0 32px 0;
+}
+
+.welcome .welcome-card--blue {
+    background: white;
+
+    max-width: 480px;
+    width: calc(100% - 32px);
 }
