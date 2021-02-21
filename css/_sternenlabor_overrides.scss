@@ -145,3 +145,9 @@
     max-width: 480px;
     width: calc(100% - 32px);
 }
+
+@media only screen and (max-width: 500px) {
+    .welcome .header {
+        height: 420px;
+    }
+}
